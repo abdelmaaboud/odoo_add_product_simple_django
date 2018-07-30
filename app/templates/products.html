@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h2>list of students</h2>
+<table border="1" style="font-size : 18pt">
+    <tr>
+        <td>
+           id
+        </td>
+        <td>
+            name
+        </td>
+         <td>
+           barcode
+        </td>
+
+    </tr>
+{% for d in data %}
+  <tr>
+        <td>
+           {{d.id}}
+        </td>
+        <td>
+          {{d.name}}
+        </td>
+         <td>
+         {{d.barcode}}
+        </td>
+        
+    </tr>
+
+
+
+{%endfor%}
+
+
+    </table>
+
+{% endblock %}
